@@ -1,18 +1,33 @@
-# Gulp Workflows
+<!--
+Creator: <Name>
+Market: SF
+-->
 
-* Wouldn't it be nice if there was a way to convert ES6 to code every browser can support? Of course!
-* Wouldn't it be cool if you could include module support from Node in client side code? Certainly.
-* What could do this sort of magic for us? *Gulp Tasks*!
+![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
-## Learning Objectives
+# Workshop Title
 
-By the end of this tutorial, you will understand:
-* What Gulp is and what it can do
-* How to install Gulp on your computer
-* How to write a Gulp task and run it
-* How to add use additional modules with Gulp
+### Why is this important?
+<!-- framing the "why" in big-picture/real world examples -->
+*This workshop is important because:*
 
-#### Introducing: Gulp
+Sometimes the most supported version of JavaScript doesn't have the latest feature. If we want to do certain things that improve productivity, we might may have to write code that *transpiles* into supported Javascript. Gulp is a useful tool to do just that.
+
+### What are the objectives?
+<!-- specific/measurable goal for students to achieve -->
+*After this workshop, developers will be able to:*
+
+* Install Gulp
+* Write a Gulp task and run it
+* Integrate Gulp modules
+
+### Where should we be now?
+<!-- call out the skills that are prerequisites -->
+*Before this workshop, developers should already be able to:*
+
+* Implement client & server-side JavaScript.
+
+## Introducing Gulp
 
 * Gulp is a software built on Node.
 * It runs **tasks** that manipulate files on your system.
@@ -20,7 +35,7 @@ By the end of this tutorial, you will understand:
 * There are many community-built plugins built to work directly with gulp.
 * It is commonly used for transcompilation and minificiation to automate your workflow.
 
-#### Installing Gulp
+## Installing Gulp
 
 1. You'll want to install gulp globally. You can do this by running the `npm install gulp -g` command.
 1. This states that we want to use `npm` to install the `gulp` package globally (for any project to use).
@@ -41,7 +56,7 @@ Please check the documentation for proper gulpfile formatting
 
 Another error! Ok, let's solve this problem by defining a Gulp task.
 
-#### Defining a Gulp Task
+## Defining a Gulp Task
 
 * What is a task?
 * A task is something we must do to achieve a result.
@@ -50,7 +65,7 @@ Another error! Ok, let's solve this problem by defining a Gulp task.
 
 In our `gulpfile.js` we need to include the `gulp` module. To do this, we should define a variable: `var gulp = require('gulp');` This will allow us to call upon Gulp to **create a task**.
 
-##### My First (Default) Task
+### First (Default) Task
 
 After declaring our `gulp` variable, we should create our first task. This will require us to call upon Gulp to define a task. We must also have a name for our task. By *default*, Gulp requires a `default` task. It is the first task that Gulp will look for when reading your `gulpfile.js`. Let's define our first (default) task:
 
@@ -71,7 +86,7 @@ Starting 'default'...
 I am the default task. Hear me roar
 Finished 'default' after 144 μs
 ```
-#### Compiling Sass
+### Compiling Sass
 
 Create a new directory `sass-to-css` and `cd` into it.
 
@@ -109,7 +124,7 @@ gulp.task('default',function() {
 });
 ```
 
-#### Compiling ES6
+### Compiling ES6
 
 We've yet to talk about ES6, aka ECMAScript 2015, but it's the next iteration of JavaScript so let's get a taste for it. It's nice to write in, but not supported everywhere yet. Let's write some ES6 code and compile it to ES5, which is universally supported.
 
@@ -182,7 +197,7 @@ Run `gulp` in your project's root, then create an `app.js` file in your `src` di
 
 Exciting stuff! Here's a quick look at some of the [new ES6 syntax](https://github.com/lukehoban/es6features). Take a moment to review it and then try out this [online quiz](http://tutorialzine.com/2015/11/think-you-know-es6-prove-it/) (open book is fine). It will introduce you to some new ES6 concepts. Feel free to jot down anything that's surprising and we'll discuss it. Feel free to try any of this fancy ES6 stuff out in your `src/app.js` file.
 
-##### General Gulp Tips and Tricks
+## General Gulp Tips and Tricks
 
 * You will need to re-run the `gulp` command every time you make a change to the `gulpfile.js`.
 * There is `nodemon` [support](https://github.com/JacksonGariety/gulp-nodemon) for gulp.
