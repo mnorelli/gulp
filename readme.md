@@ -11,15 +11,14 @@ Market: SF
 <!-- framing the "why" in big-picture/real world examples -->
 *This workshop is important because:*
 
-Sometimes the most supported version of JavaScript doesn't have the latest feature. If we want to do certain things that improve productivity, we might may have to write code that *transpiles* into supported Javascript. Gulp is a useful tool to do just that.
+Gulp is a useful tool for automating tasks in order to increase productivity. Today we'll specifically use it mostly for *transpiling* ES6 to ES5 and Sass into CSS.
 
 ### What are the objectives?
 <!-- specific/measurable goal for students to achieve -->
 *After this workshop, developers will be able to:*
 
-* Install Gulp
 * Write a Gulp task and run it
-* Integrate Gulp modules
+* Leverage pre-built Gulp plugins
 
 ### Where should we be now?
 <!-- call out the skills that are prerequisites -->
@@ -33,14 +32,13 @@ Sometimes the most supported version of JavaScript doesn't have the latest featu
 * It runs **tasks** that manipulate files on your system.
 * It is an active, open-source project.
 * There are many community-built plugins built to work directly with gulp.
-* It is commonly used for transcompilation and minificiation to automate your workflow.
+* Among other things, it is commonly used for transcompilation and minificiation to automate your workflow.
 
 ## Installing Gulp
 
 1. You'll want to install gulp globally. You can do this by running the `npm install gulp -g` command.
-1. This states that we want to use `npm` to install the `gulp` package globally (for any project to use).
-1. We also need to include gulp in our project. To do that, we will run `npm install gulp --save-dev`. Let's use `--save-dev` because any build processes typically happen just in a dev environment; a production environment should not be concerned with build tools.
-1. Now, we should run `gulp`!
+1. We also need to include gulp in our project. To do that, we will run `npm install gulp --save-dev`. Let's use `--save-dev` (a production environment should not be concerned with build tools).
+1. Now, run `gulp`!
 
 ```bash
 No gulpfile found
@@ -197,7 +195,7 @@ Run `gulp` in your project's root, then create an `app.js` file in your `src` di
 
 Exciting stuff! Here's a quick look at some of the [new ES6 syntax](https://github.com/lukehoban/es6features). Take a moment to review it and then try out this [online quiz](http://tutorialzine.com/2015/11/think-you-know-es6-prove-it/) (open book is fine). It will introduce you to some new ES6 concepts. Feel free to jot down anything that's surprising and we'll discuss it. Feel free to try any of this fancy ES6 stuff out in your `src/app.js` file.
 
-## General Gulp Tips and Tricks
+## Additional Notes
 
 * You will need to re-run the `gulp` command every time you make a change to the `gulpfile.js`.
 * There is `nodemon` [support](https://github.com/JacksonGariety/gulp-nodemon) for gulp.
